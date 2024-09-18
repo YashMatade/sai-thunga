@@ -2,9 +2,18 @@
     background: #F8F8F8;
     border-radius: 15px;
     padding: 2em;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+align-items: center;
+gap: 3em;
    margin-bottom: 6em;
+}
+
+
+.analytics-item img{
+    width: 100px;
+    object-fit: cover;
 }
 
 
@@ -13,7 +22,7 @@
     color:#36306E
     ;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 0;
 }
 
@@ -44,13 +53,29 @@ flex-direction: column;
     .analytics-container{
         background: #F8F8F8;
         border-radius: 15px;
-        padding: 2em;
+        padding: 1em;
        display: grid;
-       grid-template-columns: 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr;
        margin-bottom: 2em;
+       grid-auto-flow: dense;
        justify-content: center;
        align-items: center;
-       gap: 1em;
+       gap: 5px;
+       
        place-items: center;
     }
+
+    .analytics-item{
+        margin-bottom: 10px;
+
+    }
+  
+    .analytics-item p{
+        font-size: 1em !important;
+        margin-bottom: 0;
+        white-space: wrap;
+    }
+
+
+    
 }

@@ -38,7 +38,7 @@ const Home = () => {
             <div className="main_ad_contents">
               <div className="ad_container_content">
                 <h3>
-                  <span>Prioritize your health:</span>Make your health a top
+                  Prioritize your health:Make your health a top
                   priority and take proactive steps to maintain it.
                 </h3>
                 <p>

@@ -120,7 +120,6 @@ font-size: 1em;
 }
 .company_page ul{
     list-style-type: none;
-
 }
 
 .company_page h3{
@@ -150,6 +149,7 @@ transform: translateX(30px);
     font-weight: 400;
     margin-bottom:5px;
     cursor: pointer;
+
 }
 
 
@@ -158,9 +158,8 @@ transform: translateX(30px);
     .company_pages{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-top: 1em;
-      
-     
+        margin-top: 1.5em;
+       
      }
 
      .cta_footer_btn{
@@ -169,7 +168,7 @@ transform: translateX(30px);
        border: none;
         height: 100%;
         color: white;
-        padding: 1em;
+        padding:10px;
     }
 
 
@@ -181,6 +180,7 @@ transform: translateX(30px);
 
       .footer-copyrights{
         display: flex;
+        gap: 2em;
         margin-top: 1em;
         align-items: center;
         justify-content: space-between;    
