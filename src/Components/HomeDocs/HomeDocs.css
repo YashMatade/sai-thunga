@@ -1,0 +1,246 @@
+.top_content h3{ 
+    
+    color: #231F20;
+}
+
+
+.top_content h3 span{
+color: #36306E;
+font-weight: 600;
+}
+
+
+.top_content p{
+    color:  #687183;
+
+
+}
+
+
+.suggestion_container{
+    border-radius: 15px;
+}
+
+.top_content{
+    padding: 2em;
+}
+
+
+.icons_Cta{
+display: flex;
+gap: 1em;
+}
+
+
+.doctor_profile_card{
+    background: #F8F8F8;
+
+    width: 506px;
+
+cursor: pointer;
+border-radius: 15px;
+padding: 1em;
+
+
+}
+
+
+
+.doctor_profile_card_con{
+    gap: 1em;
+    display: flex;
+
+}
+
+
+  
+
+
+.doctor_info h4{
+color: #1B1B1B;
+font-size: 1em;
+
+}
+
+
+.doctor_info p{
+    font-size: 14px;
+    color: #687183;
+}
+
+.exp{
+    color: #5A5A5A;
+    margin-bottom: 4px;
+
+}
+
+.exp span{
+    color: #CACACA;
+}
+
+.spls{
+    color:  #5A5A5A;
+    
+}
+
+.designation{
+    margin-bottom: 4px;
+    font-size: 14px;
+
+}
+
+.home_Doc_Cta {
+    display: flex;
+    gap: 1em;
+}
+
+
+.bookNow {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 40px;
+    background: #E42424;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bookNow:hover {
+    background-color: #C61D1D; 
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+  }
+  
+
+
+  .call_now_home_doc {
+    color: #E42424;
+    font-size: 12px;
+    border: 1px solid #BBBBBB;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .call_now_home_doc:hover {
+    border-color: #E42424; 
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+
+/*Searchbar */
+
+.search_suggestions_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.search_bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: translateY(30px);
+    width: 90%;
+}
+
+.search_bar input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    padding-right: 30px;
+border: none;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15), 0px 4px 8px rgba(0, 0, 0, 0.1); /* Premium box shadow */
+
+    border-radius: 4px;
+}
+
+
+.search_bar input::placeholder{
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.search_icon {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+
+.doctor_image img{
+    max-width:100%;
+    object-fit: cover;
+
+
+}
+
+.suggestion_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    
+    padding: 3em;
+     background: #36306E;
+    width: 100%;
+margin-bottom: 3rem;
+}
+
+.suggestion_btns button{
+    color: #36306E;
+    border: 1px solid #00000066;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+
+/* Spacing to match figma */
+.doctors_Section{
+    margin-bottom: 3em;
+}
+
+
+.suggestion_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+
+@media only screen and (max-width: 768px){
+    
+
+
+    .suggestion_btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+
+    .suggestion_container {
+        
+        
+        padding: 3em;
+         background: #36306E;
+        width: 100%;
+    margin-bottom: 0;
+    }
+    
+}

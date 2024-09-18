@@ -1,0 +1,148 @@
+/* .Banner_Contents h3{
+font-size: 3em;
+
+font-weight: 300;
+margin-bottom: 2em;
+}
+
+
+.Banner_Contents h3 span{
+    color: transparent;
+    background: linear-gradient(269.27deg, #3B3479 0.91%, #6457D6 97.51%);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    font-weight: 600;
+
+
+}
+
+
+.Home_Banner{
+    padding: 1em;
+}
+
+.Banner_Contents{
+    padding: 1em;
+   
+}
+
+
+.bannerinfo{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.bannerinfo p{
+    width: 304px;
+    color: #687183;
+    text-align: justify;
+}
+
+.banner_info{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+
+
+.Verify_card{
+    display: flex;
+    background: linear-gradient(42.07deg, #36306E 4.11%, #6559D9 80.63%);
+border-radius: 15px !important;
+
+
+}
+
+
+.main_contents_verify h3,.main_contents_verify h3 p{
+    color: white;
+    text-align: justify;
+}
+
+
+.verify_badge{
+    box-shadow: 0px 23px 25.6px -9px #0E7D7E38;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 5px
+    
+}
+
+.verify_status{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.desc_Verify{
+    font-size: 14px;
+    color: #D3D3D3 !important;
+    text-align: justify;
+}
+
+
+.Verify_card_con{
+
+
+    padding: 1em;
+}
+
+.main_contents_verify button{
+border: none;
+border-radius: 5px;
+height: 45px;
+color: #36306E;
+font-weight: 600;
+}
+
+
+
+.banner_info button{
+    width: 310px;
+height: 41px;
+box-shadow: 0px 15px 17.4px -10px #0E7D7E1F;
+border: none;
+color: #36306E;
+background: #FFFFFF;
+
+
+border-radius: 50px;
+
+}
+
+
+.cta_Banner{
+    width: 310px;
+height: 41px;
+box-shadow: 0px 15px 17.4px -10px #0E7D7E1F;
+border: none;
+color: #36306E;
+background: #F2F2F2 !important;
+color:  #7E8697 !important;
+ 
+
+border-radius: 50px;
+}
+
+ */
+
+
+
+ .home_banner img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+
+
+ 

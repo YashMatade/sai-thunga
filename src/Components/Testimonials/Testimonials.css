@@ -1,0 +1,52 @@
+.slick-center {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+  color: white;
+  background: linear-gradient(108.73deg, #36306e 1.23%, #905bff 100.11%);
+  border-radius: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.slick-center div {
+  border: none;
+}
+
+.slick-slide {
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+.slick-center.slick-active {
+  opacity: 1;
+}
+.slick-slide {
+  opacity: 0.8; /* Other slides are less visible */
+  transition: opacity 0.5s ease;
+}
+
+.slick-center .mx-3 {
+  background-color: transparent; /* Internal container background for the center slide */
+  box-shadow: none; /* Remove shadow on center slide */
+  padding: 20px;
+}
+.slick-center .center {
+  display: flex;
+}
+
+.slick-center .centerImage {
+  display: block;
+}
+
+.slick-center img {
+  border: 2px solid white; /* Add a white border around the image */
+}
+
+.slick-center h5,
+.slick-center p {
+  color: white !important; /* Ensure the text inside the center slide is white */
+}
+
+.slick-active {
+  opacity: 1;
+}

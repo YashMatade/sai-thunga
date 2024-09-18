@@ -1,0 +1,188 @@
+.footer{
+     background: #36306E;
+
+    padding: 1em;
+}
+
+.footer_cta{
+      margin-bottom: 3em;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.cta_footer_btn{
+    width: 100%;
+    background-color: #46407F;
+   border: none;
+    height: 100%;
+    color: white;
+}
+
+
+.company_pages{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+
+}
+
+.company_page{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    
+    flex-direction: column;
+    color: white;
+font-weight: 200;
+
+}
+
+
+.company_info{
+color: white;
+}
+
+.company_info p{
+    margin-bottom: 0;
+}
+
+.company_info h3{
+    padding-bottom: 0.5em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ffffff;
+    display: inline-block; 
+    width: auto; 
+    
+}
+
+
+.social_link{
+border-top: 1px solid gray;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+padding: 1em;
+
+}
+
+.footer-copyrights{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.gototop {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    padding: 1em;
+    background-color: transparent; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+
+
+.footer-copyrights h3{
+color: white;
+font-size: 1em;
+}
+
+  .social_link h3{
+    font-size: 1em;
+  }
+
+  .gototop:hover{
+    background: #ffffff;
+    color: black;
+  }
+
+.gototop_icon {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    transition: color 0.3s ease;
+  }
+
+
+
+.company_info p{
+    font-size:12px;
+    
+}
+.company_page ul{
+    list-style-type: none;
+
+}
+
+.company_page h3{
+    font-size: 0.8em;
+transform: translateX(30px);
+    text-transform: uppercase;
+}
+
+
+.cta_footer_content{
+    padding: 1em;
+    color: white;
+}
+
+
+.cta_footer_content h3{
+    font-size: 1.5rem;
+}
+
+.cta_footer_content p{
+    font-weight: 200;
+    text-align: justify;
+}
+
+
+.company_page li{
+    font-weight: 400;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    .company_pages{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1em;
+      
+     
+     }
+
+     .cta_footer_btn{
+        width: 100%;
+        background-color: #46407F;
+       border: none;
+        height: 100%;
+        color: white;
+        padding: 1em;
+    }
+
+
+    .gototop {
+        width:40px; 
+        height: 40px;
+       
+      }
+
+      .footer-copyrights{
+        display: flex;
+        margin-top: 1em;
+        align-items: center;
+        justify-content: space-between;    
+    }
+}
