@@ -165,7 +165,7 @@ const Header = () => {
               <Link to="/departments" onClick={toggleSidebar}>
                 Departments
               </Link>
-              <Link to="/our-doctors" onClick={toggleSidebar}>
+              <Link to="/doctors" onClick={toggleSidebar}>
                 Our Doctors
               </Link>
               <Link to="/patient-care" onClick={toggleSidebar}>
