@@ -1,0 +1,28 @@
+*::-webkit-scrollbar {
+  width: 0.3em;
+  height: 0.3em;
+}
+
+@media screen and (max-width: 2) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #3B3576;
+  border-radius: 0.8em;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #3B3576;
+}
+
+*::-webkit-scrollbar-track {
+  position: absolute;
+    top: 0;
+}
