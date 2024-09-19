@@ -38,8 +38,8 @@ const Home = () => {
             <div className="main_ad_contents">
               <div className="ad_container_content">
                 <h3>
-                  Prioritize your health:Make your health a top
-                  priority and take proactive steps to maintain it.
+                  Prioritize your health:Make your health a top priority and
+                  take proactive steps to maintain it.
                 </h3>
                 <p>
                   We use only the best quality materials on the market in order

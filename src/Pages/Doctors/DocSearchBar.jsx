@@ -36,7 +36,14 @@ const styles = {
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
     padding: "10px",
-    width: "250px",
+    maxWidth: "250px",
+    border: "0",
+  },
+  dropdownButtonMob: {
+    borderTopLeftRadius: "5px",
+    borderBottomLeftRadius: "5px",
+    padding: "10px",
+    maxWidth: "100px",
     border: "0",
   },
   searchInput: {
@@ -73,7 +80,16 @@ const DocSearchBar = () => {
           <p style={styles.subheading}>Find The Care You Need</p>
         </div>
         <div className="input-group" style={styles.inputGroup}>
-          <select name="" id="" className="" style={styles.dropdownButton}>
+          <select
+            name=""
+            id=""
+            className=""
+            style={
+              window.innerWidth < 576
+                ? styles.dropdownButtonMob
+                : styles.dropdownButton
+            }
+          >
             <option value="">Select City</option>
             <option value="">Kormangala</option>
             <option value="">Banglore</option>
