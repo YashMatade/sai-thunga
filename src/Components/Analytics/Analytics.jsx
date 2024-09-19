@@ -28,6 +28,11 @@ const Analytics = () => {
       img: heart,
       count: 7520,
       name: 'Orthopedics'
+    },
+    {
+      img: heart,
+      count: 7520,
+      name: 'Orthopedics'
     }
   ];
 

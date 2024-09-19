@@ -228,15 +228,17 @@ const Department = [
 
 const Depart = () => {
   const [selectedDepartmentIndex, setSelectedDepartmentIndex] = useState(0); 
-
+  const [showAll, setShowAll] = useState(false);
   const handleDepartmentClick = (index) => {
     setSelectedDepartmentIndex(index);
   };
 
   const selectedDepartment = Department[selectedDepartmentIndex]; 
+  const displayedTreatments = showAll ? selectedDepartment.Treatments : selectedDepartment.Treatments.slice(0, 4);
+
 
   return (
-    <div className="container mb-3">
+    <div>
       <div className="depT_Intro">
       <p>We are Doing Great</p>
       <h3>Our Departments</h3>
@@ -264,7 +266,7 @@ const Depart = () => {
 
   <div className="col-lg-6">
   <div className="treatment_list">
-            {selectedDepartment.Treatments.map((treatment, index) => (
+            {displayedTreatments.map((treatment, index) => (
                               <Link to={treatment.Route} key={index} className="treatment-link" style={{textDecoration:"none"}}>
 
               <div  className="treatment-item">
@@ -284,6 +286,18 @@ const Depart = () => {
             ))}
          
           </div>
+
+<div className="treatment_view_more">
+{selectedDepartment.Treatments.length > 4 && (
+        <button 
+          onClick={() => setShowAll(!showAll)} 
+          style={{ marginTop: '20px' }}
+        >
+          {showAll ? 'Show Less' : 'View All'}
+        </button>
+      )}
+</div>
+         
   </div>
 </div>
            

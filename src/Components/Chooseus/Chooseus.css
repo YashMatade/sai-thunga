@@ -68,6 +68,10 @@ height: 12px;
      }
 
 
+     .chooseus-content{
+        padding: 1em !important;
+     }
+
      .choose_image img{
         width: 100%;
      }
