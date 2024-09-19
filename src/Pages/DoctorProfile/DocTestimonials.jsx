@@ -8,7 +8,7 @@ const DocTestimonials = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplayspeed: 2000,
@@ -85,7 +85,7 @@ const DocTestimonials = () => {
 
   return (
     <div className="container-fluid my-5">
-      <Slider {...settings} style={{ marginTop: "10px" }}>
+      <Slider {...settings} style={{ marginTop: "" }}>
         {testimonials.map((testimonial) => (
           <div key={testimonial.id}>
             <div

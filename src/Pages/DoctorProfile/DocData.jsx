@@ -51,8 +51,8 @@ const DocData = () => {
                     Call Us: 9326612010
                   </button>
                   <button
-                    className="btn  text-white"
-                    style={{ fontWeight: "500", backgroundColor: "#36306E" }}
+                    className="btn btn-danger text-white"
+                    style={{ fontWeight: "500", backgroundColor: "" }}
                   >
                     Book Appointment
                   </button>
@@ -197,16 +197,16 @@ const DocData = () => {
                   </button>
                 </div>
               </div>
-              <div className="mt-4">
-                <h4>Patient Reviews for Dr. Kamal Bachani</h4>
-                <DocTestimonials />
-              </div>
             </div>
           </div>
           <div className="col-lg-4 ps-3 pe-3">
             <div style={{ position: "sticky", top: "20px" }}>
               <BookingForm />
             </div>
+          </div>
+          <div className="mt-4">
+            <h4>Patient Reviews for Dr. Kamal Bachani</h4>
+            <DocTestimonials />
           </div>
         </div>
       </div>
