@@ -119,7 +119,7 @@ const DoctorCard = ({ doctor }) => {
                       style={{
                         fontWeight: "",
                         fontSize: "14px",
-                        color:"#3B3576"
+                        color: "#3B3576",
                       }}
                     >
                       <>{`Experience - ${doctor.experience || 3} Years `}</>
@@ -165,7 +165,7 @@ const DoctorCard = ({ doctor }) => {
                           window.innerWidth < 576
                             ? {
                                 fontWeight: "400",
-                                fontSize: "10px",
+                                fontSize: "14px",
                                 border: "2px solid #1376F8",
                               }
                             : {
@@ -188,7 +188,7 @@ const DoctorCard = ({ doctor }) => {
                           window.innerWidth < 576
                             ? {
                                 fontWeight: "400",
-                                fontSize: "10px",
+                                fontSize: "14px",
                                 color: "white",
                                 background: "red",
                               }
@@ -206,13 +206,6 @@ const DoctorCard = ({ doctor }) => {
                       </button>
                     </div>
                   </div>
-                  {/* {openDoctorId === doctor._id && (
-                        <Schedule
-                          doctorName={doctor.name}
-                          region={doctor.region}
-                          onAvailabilityChange={handleAvailabilityChange}
-                        />
-                      )}{" "} */}
                 </div>
               </div>
             </div>

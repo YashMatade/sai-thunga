@@ -26,11 +26,11 @@ const DocData = () => {
               <div className="col-lg-9">
                 <h3 className="mt-4">Dr. Shrikant K P</h3> <span>MBBS, MD</span>
                 <div className="mt-2">Pediatrician, Gastroenterologist</div>
-                <div className="mt-2">
-                  <small>55 year’s Experience overall</small>
-                  <small className="ms-3">
+                <div className="mt-2 d-flex justify-content-around">
+                  <div>55 year’s Experience overall</div>
+                  <div className="ms-3">
                     <FaLocationPin color="red" /> Domlur, Bangalore
-                  </small>
+                  </div>
                 </div>
                 <div className="mt-2">
                   <span style={{ fontWeight: "500", fontSize: "18px" }}>
@@ -43,16 +43,24 @@ const DocData = () => {
                   </span>
                   <span className="ms-2">33 patient Stories</span>
                 </div>
-                <div className="d-flex justify-content-between mt-3">
+                <div className="d-flex justify-content-around mt-3">
                   <button
-                    className="btn btn-outline-danger"
-                    style={{ fontWeight: "500" }}
+                    className="btn btn-outline-danger me-3"
+                    style={
+                      window.innerWidth < 576
+                        ? { fontWeight: "400", fontSize: "14px" }
+                        : { fontWeight: "400" }
+                    }
                   >
                     Call Us: 9326612010
                   </button>
                   <button
                     className="btn btn-danger text-white"
-                    style={{ fontWeight: "500", backgroundColor: "" }}
+                    style={
+                      window.innerWidth < 576
+                        ? { fontWeight: "400", fontSize: "14px" }
+                        : { fontWeight: "400" }
+                    }
                   >
                     Book Appointment
                   </button>
@@ -199,7 +207,7 @@ const DocData = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 ps-3 pe-3">
+          <div className="col-lg-4 ps-3 pe-3 mt-3">
             <div style={{ position: "sticky", top: "20px" }}>
               <BookingForm />
             </div>

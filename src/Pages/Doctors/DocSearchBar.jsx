@@ -38,12 +38,13 @@ const styles = {
     padding: "10px",
     maxWidth: "250px",
     border: "0",
+    backgroundColor: "white",
   },
   dropdownButtonMob: {
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
     padding: "10px",
-    maxWidth: "100px",
+    Width: "100%",
     border: "0",
   },
   searchInput: {
@@ -72,45 +73,38 @@ const styles = {
 const DocSearchBar = () => {
   return (
     <>
-      <div style={styles.container} className="container">
-        <div style={styles.headingContainer}>
-          <h2 style={styles.heading}>
-            When You Need Answers, Best Doctors Can Help
-          </h2>
-          <p style={styles.subheading}>Find The Care You Need</p>
+      <div className="container">
+        <div style={styles.container}>
+          <div style={styles.headingContainer}>
+            <h2 style={styles.heading}>
+              When You Need Answers, Best Doctors Can Help
+            </h2>
+            <p style={styles.subheading}>Find The Care You Need</p>
+          </div>
+          <div className={"input-group"} style={styles.inputGroup}>
+            <select name="" id="" className="" style={styles.dropdownButton}>
+              <option value="">Select City</option>
+              <option value="">Kormangala</option>
+              <option value="">Banglore</option>
+            </select>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search By Disease Or Doctor Name"
+              aria-label="Search"
+              style={styles.searchInput}
+            />
+          </div>
         </div>
-        <div className="input-group" style={styles.inputGroup}>
-          <select
-            name=""
-            id=""
-            className=""
-            style={
-              window.innerWidth < 576
-                ? styles.dropdownButtonMob
-                : styles.dropdownButton
-            }
-          >
-            <option value="">Select City</option>
-            <option value="">Kormangala</option>
-            <option value="">Banglore</option>
-          </select>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search By Disease Or Doctor Name"
-            aria-label="Search"
-            style={styles.searchInput}
-          />
+        <div className="text-center mt-5">
+          <p style={styles.doctorsAvailable}>
+            545 doctors available in Bangalore
+          </p>
+          <p style={styles.bookAppointment}>
+            <BsFillCheckCircleFill style={styles.icon} />
+            Book appointment with minimum wait-time & verified doctor's details
+          </p>
         </div>
-      </div>
-      <div className="text-center mt-5">
-        <p style={styles.doctorsAvailable}>
-          545 doctors available in Bangalore
-        </p>
-        <p style={styles.bookAppointment}>
-          <BsFillCheckCircleFill style={styles.icon} />
-          Book appointment with minimum wait-time & verified doctor's details
-        </p>
       </div>
     </>
   );
