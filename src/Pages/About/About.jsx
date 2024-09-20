@@ -159,7 +159,7 @@ const About = () => {
     <div className='about' style={{overflow:"hidden"}}>
       <Header />
 
-      <section className="top_section border container-fluid">
+      <section className="top_section container-fluid">
       {TopContents.map((content, index) => (
         <div className="top_content_wrapper" key={index}>
           {/* Banner Image and Title */}
