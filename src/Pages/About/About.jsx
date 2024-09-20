@@ -156,7 +156,7 @@ const teamSettings = {
 
 const About = () => {
   return (
-    <div className='about border' style={{overflow:"hidden"}}>
+    <div className='about' style={{overflow:"hidden"}}>
       <Header />
 
       <section className="top_section container-fluid">
