@@ -18,6 +18,7 @@ import Top3 from '/about/about_top_3.png';
 
 import { FaArrowRightLong } from "react-icons/fa6";
 import Slider from 'react-slick';
+import Testimonials from '../../Components/Testimonials/Testimonials';
 
 const CtaContents = [
   { CtaIcon: Cta1, ctatext: "24x7 Emergency Call" },
@@ -56,9 +57,7 @@ const settings = {
   speed: 400,
   slidesToShow: 4,
   slidesToScroll: 4,
-  centerMode: true,
-  centerPadding: '0px',
-  focusOnSelect: true,
+   focusOnSelect: true,
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
@@ -125,7 +124,7 @@ buttonText:"Learn More"
 const teamSettings = {
   dots: false,
   infinite: Teams.length,
-  speed: 500,
+  speed: 400,
   slidesToShow: 4,
   slidesToScroll: 4,
   autoplay: true,
@@ -157,7 +156,7 @@ const teamSettings = {
 
 const About = () => {
   return (
-    <div className='about ' style={{overflow:"hidden"}}>
+    <div className='about border' style={{overflow:"hidden"}}>
       <Header />
 
       <section className="top_section container-fluid">
@@ -165,7 +164,7 @@ const About = () => {
         <div className="top_content_wrapper" key={index}>
           {/* Banner Image and Title */}
           <div className="top_banner">
-          <h2><span>About Sai Thunga:</span>{content.title}</h2>
+          <h3><span>About Sai Thunga:</span>{content.title}</h3>
 
 <div className="Top_section_contents">
   <img src={content.bannerImage} alt="Banner" className="top_banner_img" />
@@ -190,7 +189,10 @@ const About = () => {
           <div className="top_link_items">
             {content.LInkItems.map((linkItem, linkIndex) => (
               <div className="link_item" key={linkIndex}>
+                <div className="link_img">
                 <img src={linkItem.img} alt={linkItem.title} />
+
+                </div>
                 <p>{linkItem.title}</p>
                 <FaArrowRightLong  size={40}/>
                 <button>{linkItem.buttonText}</button>
@@ -209,22 +211,25 @@ const About = () => {
     </section>
 
       {/* Cta Contents */}
-      <section className='container-fluid all_Cta'>
+      <section className='container-fluid'>
+        <div className="cta_container">
         <Slider {...settings}>
           {CtaContents.map((CtaContent, index) => (
             <div className="single_cta" key={index}>
               <div className="single_Cta_img">
                 <img src={CtaContent.CtaIcon} alt={CtaContent.ctatext} />
               </div>
-              <p className="text-black">{CtaContent.ctatext}</p>
+              <p>{CtaContent.ctatext}</p>
               <FaArrowRightLong />
             </div>
           ))}
         </Slider>
+        </div>
+      
       </section>
 
       {/* Choose us */}
-<section className="aboutchoose ">
+<section className="aboutchoose">
 <ChooseusSection />
 </section>
 
@@ -257,6 +262,10 @@ const About = () => {
       </section>
 
       {/* Testimonials */}
+      <section className="">
+      <Testimonials/>
+
+      </section>
 
       {/* Team Section */}
       <section className="team_section">
