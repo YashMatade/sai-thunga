@@ -1,4 +1,4 @@
-/* Cta COntents */
+/* CTA Slider */
 
 .single_cta{
 width: 300px;
@@ -23,8 +23,6 @@ color: white;
 margin-bottom: 2em;
 padding: 1em;
 }
-
-
 
 .aboutchoose{
     margin-bottom: 2em;
@@ -221,9 +219,6 @@ font-weight: 400;
 }
 
 
-
-
-
 .top_link_items{
 background: #F6F6F6;
 padding: 1em;
@@ -250,13 +245,6 @@ width: 100%;
     color:  #231F20;
 font-weight: 400;    font-size: 1.2em;
 }
-
-
-/* List */
-
-
-
-
 
 .top_list ul {
     list-style: none; 
@@ -336,12 +324,11 @@ font-weight: 400;    font-size: 1.2em;
   line-height: 25.2px;
 }
 
-/* Link Items Section */
 .top_link_items {
   background: #F6F6F6;
   padding: 1em;
   border-radius: 15px;
-  width: 100%; /* Ensures full width on mobile */
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,10 +369,6 @@ font-weight: 400;    font-size: 1.2em;
   color: #000000CC;
   font-weight: 400;
 }
-
-
-
-
 
   }
 
