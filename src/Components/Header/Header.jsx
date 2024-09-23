@@ -9,8 +9,8 @@ import { BiSolidAmbulance } from "react-icons/bi";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { MdArrowDropDown } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi"; // Hamburger Icon
-import { MdClose } from "react-icons/md"; // Close Icon
+import { GiHamburgerMenu } from "react-icons/gi"; 
+import { MdClose } from "react-icons/md"; 
 
 const locations = ["Banglore", "Delhi", "Mumbai", "Chennai"];
 
@@ -33,7 +33,7 @@ const Header = () => {
   }, []);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen); // Toggle sidebar state
+    setSidebarOpen(!sidebarOpen); 
   };
 
   const renderDesktopNavbar = () => (

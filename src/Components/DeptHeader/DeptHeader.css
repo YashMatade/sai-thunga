@@ -26,6 +26,7 @@
 }
 
 
+
 .location-suggestions{
   margin-top:520px;
 }
@@ -378,16 +379,15 @@ outline: none;
 }
 
 
-/* More specific targeting */
 .header_form-inputs input[type="number"]::-webkit-outer-spin-button,
 .header_form-inputs input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none; /* Hides the spin buttons in Chrome, Safari, and Edge */
-  margin: 0; /* Removes any default margin */
+  -webkit-appearance: none;
+  margin: 0; 
 }
 
 .header_form-inputs input[type="number"] {
-  -moz-appearance: textfield; /* Hides the spin buttons in Firefox */
-  appearance: textfield; /* Ensures cross-browser consistency */
+  -moz-appearance: textfield; 
+  appearance: textfield; 
 }
 
 
@@ -575,6 +575,10 @@ font-size: 16px;
  }
  .location{
   font-size: 16px;
+ }
+
+ .content{
+  margin-bottom: 200px;
  }
 
 
