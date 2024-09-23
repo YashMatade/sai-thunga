@@ -90,7 +90,7 @@ const HomeDocs = () => {
           />
           <FaSearch className="search_icon" />
         </div>
-        <div className="suggestion_container">
+        <div className="suggestion_container border">
           <div className="suggestion_btns">
             <button>Our Services</button>
             <button>Our Doctors</button>

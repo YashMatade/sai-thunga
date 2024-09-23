@@ -1,0 +1,36 @@
+.dept{
+    overflow: "";
+}
+
+
+.dept_side_form{
+    margin-top: 1rem;
+}  
+
+
+.disease-input-group button{
+    border-radius:5px;
+    background: linear-gradient(180deg, #51BEE7 0%, #3398EB 49.9%, #1376F8 100%);
+    margin-top: -10px;
+    color: white;
+    border: none;
+    
+}
+
+
+
+.page_field{
+    color: black;
+    padding-left: 20px ;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+
+.sticky-col {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: fit-content; /* Ensure the height fits its content */
+  }
+  

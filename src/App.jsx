@@ -11,11 +11,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import DoctorProfile from "./Pages/DoctorProfile/DoctorProfile";
+import Departments from "./Pages/Department/Department";
+import Treatments from "./Pages/Treatments/Treatment";
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/department/:dname" element={<Departments />} />
+        <Route path="/treatment/:tname" element={<Treatments/>} />
+
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/docprofile/:docname" element={<DoctorProfile />} />

@@ -1,0 +1,370 @@
+.dept_doctor_location-btns{
+    height: auto;
+display: grid;
+gap: 1em;
+grid-template-columns: 200px 200px 200px 200px ;
+width: 100%;
+word-wrap: break-word;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.notfound{
+    transform: translateX(220px);
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+   /* transform: translateX(100%); */
+}
+
+
+.no_doctor{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.normal_{
+   display: flex;
+   flex-direction: row;
+   margin-right:380px;
+}
+
+.dept_doctor-location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.single-doctor-container{
+    width: 500px;
+    margin-top: 40px;
+}
+
+
+  .de_name{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+.doctors{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+
+.dept_doctor-location h3{
+    text-align: center;
+    color: #011632;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.dept_doctors_box h3{
+    color: #011632;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+}
+
+.dept_doctor-location p{
+    text-align: center;
+    color: #1376F8;
+font-size: 16px;
+font-weight: 500;
+
+
+}
+.dept_doctor_location-btns button{
+   
+    box-shadow: 0px 15px 20px 0px #00000040;
+    max-width: 100%;
+    min-height: 45px;
+    border-radius:15px ;
+    color: black;
+    border: none;
+font-size: 0.8rem;
+font-weight:500;
+
+text-transform: capitalize;
+text-align: center;
+        margin-top: 5%;
+       
+        /* word-wrap: break-word; */
+
+}
+
+
+.dept-doc-slide{
+  margin-left: 80px;
+}
+
+
+
+.de_name{
+    margin-left: 50px;
+}
+.doctors_spl_dept{
+    display: flex;
+}
+
+
+.dept_doctor_location-btns button:hover{
+color: white;
+background: #E42424;
+}
+
+
+
+.doctors-box{
+    margin-bottom: 1rem;
+}
+
+.doctors-box h3{
+    margin-top: 40px;
+    margin-bottom: -60px;
+font-size: 1.3rem;
+font-weight: 600;
+margin-left: -90px;
+
+
+}
+
+
+
+
+.normal{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.single-doctor-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+
+
+@media (max-width:576px){
+    .dept_doctor_location-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+
+    .dept_doctor-section{
+        margin-bottom: 3rem;
+    }
+
+
+    .notfound{
+        font-size: 16px;
+        transform: translateX(90px);
+        white-space: nowrap;
+    }
+   
+
+    .normal_{
+        display: flex;
+    }
+   
+
+    .dept_doctor-location h3{
+        /* margin-left:9%; */
+        font-size: 20px;
+
+    }
+
+    .dept_doctor-location p{
+        font-size: 16px;
+        white-space: wrap;
+        text-align: center;
+
+    }
+
+    .doctors-box h3{
+        margin-top: 2rem !important;
+    }
+
+    .singledoctorbox{
+        margin-top: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+.doctorsbox{
+    margin-top: 1rem;
+}
+
+    .doctors-box h3{
+        font-size: 20px;
+        margin-left: 0px;
+       transform: translateY(30px);
+        text-align: center;
+        
+    }
+
+
+  
+
+.cta-btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dept_doctor_location-btns button{
+    /* font-size: 12px; */
+}
+
+
+
+
+.dept-doc-slide{
+    margin-left: 80px;
+  }
+  
+
+
+
+  
+  .view-all-docs button{
+    font-size: 1rem !important;
+  }
+  
+  .de_name,.view-all-docs{
+    margin-bottom: 3rem;
+      margin-left: 0px;
+  }
+
+
+  .view-all-docs{
+    margin-bottom: 3rem !important;
+
+
+  }
+
+
+  
+
+.no_doctor{
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+
+.normal_,.normal{
+    all: initial;
+}
+
+
+.single-doctor-container{
+    max-width: 100%;
+    margin-left: -60px;
+}
+
+.dept-doc-slide {
+    margin-left: -100px;
+   }
+
+
+   .doctors_all{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1em;
+    }
+
+.dept_doctor_card{
+    height: 350px !important;
+    /* margin-bottom: 90px; */
+}
+
+}
+
+
+
+.doctors_all{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1em;
+
+}
+
+
+
+.view-all-docs{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.view-all-docs button:hover{
+    background:#E42424;
+}
+
+.view-all-docs button{
+    max-width: 100%;
+    min-height: 40px;
+    border: none;
+    border-radius:15px ;
+    color: white;
+    background: linear-gradient(
+      0.37deg,
+      #1376F8 19.98%,
+      rgba(67, 170, 229, 0.75) 68.93%,
+      rgba(106, 229, 240, 0.75) 126.87%
+    );
+    border: 1px solid #E42424
+;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+}
+
+
+/* Slider */
+
+.doctor_controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.doctor_controls svg {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.doctor_controls svg:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.doctor_controls svg:disabled {
+    color: #ccc; 
+    cursor: not-allowed;
+}

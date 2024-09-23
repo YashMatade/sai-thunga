@@ -1,0 +1,179 @@
+
+
+
+.follow-container img{
+    width:100%;
+    
+    }
+    
+    
+    
+    
+    .viewreview{
+        width: 260px;
+    height: 45px;
+    border-radius: 4px 0px 0px 0px;
+    background: transparent;
+    border: 2px solid rgba(1, 133, 187, 1);
+    border-radius: 8px;
+    
+    }
+    
+    
+    .writereview{
+        background:  linear-gradient(0.37deg, #1376F8 19.98%, rgba(67, 170, 229, 0.75) 68.93%, rgba(106, 229, 240, 0.75) 126.87%);
+        width: 260px;
+        height: 45px;
+        border: none;
+        border-radius: 8px;
+        opacity: 0px;
+        color: white;
+        
+    
+    
+    }
+    
+    .patient_rating-header{
+        text-align: center;
+    }
+    
+    
+    .patient_rating-header h3{
+            font-weight: 600;font-size: 24px;
+    
+        line-height: 54px;
+        
+    }
+    
+    .patient-info{
+        display: flex;
+        width: 300px;
+        transform: translateY(70px);
+        margin-left: 30px;
+    }
+    
+    
+    .patient-info_detail p{
+        margin-top: -8px;
+        color:rgba(33, 149, 242, 1);
+        font-size:14px ;
+        
+    }
+    
+    .patient-review svg{
+        margin-top: -50px;  
+    color: #F3CD03;
+    }
+    .patient-review{
+        margin: 20px;
+    }
+    
+    .patient-review p{
+        /* font-family: "Montserrat"; */
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.07px;
+    
+    }
+    
+    
+    .patient-info img{
+        width: 56px;
+    height: 55px;
+    top: 4090px;
+    left: 253px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    
+    }
+    
+    .patient-info_detail{
+        display: flex;
+        flex-direction: column;
+        transform: translateX(10px);
+    }
+    
+    .patient-info_detail h5{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+    text-align: left;
+    
+    }
+    
+    .elements{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    
+    
+    
+    .patient-rating-card{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .patient_rating-header p{
+    font-size: 16px;
+    font-weight: 500;
+    color:rgba(19, 118, 248, 1);
+    margin-top: -10px;
+    }
+    
+    
+    
+    .rating-info{
+        width: 404px;
+        height: 324px;
+        padding: 1rem;
+    
+    }
+    
+    .ratings_controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    
+    @media(max-width:576px){
+        
+    
+       
+    
+    
+        .single-doctor-container{
+            margin-bottom: 3rem;
+        }
+    
+        .follow-container img{
+            max-width:100%;
+        }
+        .patient_rating-header h3{
+            margin-top: 150px;
+    font-size: 20px;
+        }
+    
+    
+        .patient_rating-header p{
+            font-size: 14px;
+            margin-top: -20px;
+        }
+    
+    
+    
+    .ratings-container{
+        transform: translateX(-3%);
+        margin: 1rem;
+    }
+    
+    
+    
+    
+    }
+    
