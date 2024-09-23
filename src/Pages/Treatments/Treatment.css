@@ -1,7 +1,8 @@
 .form_treatment {
     max-width: 100%;
     margin-top: 1rem;
-  
+    margin-bottom: 1.5rem;
+
   }
   
   
@@ -127,10 +128,13 @@
   
     .mobile_form{
       display:  block !important;
-      margin-bottom: -1.5rem;
+      margin-bottom: 1.5rem;
     }
   
+   
+
     .fixed {
+
       position: static;
       display: none;
       width: 100% !important;

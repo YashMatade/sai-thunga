@@ -8,7 +8,7 @@
 }
 
 .doctor-image-container{
-    margin-top: -20px;
+    margin-top: -10px;
 border-radius: 10px;
 
 }
@@ -226,6 +226,13 @@ outline: none;
 
 .doctorinfo{
     padding: 0.4rem;
+}
+
+
+.doctor-image-container{
+    margin-top: 0px;
+border-radius: 10px;
+
 }
 
 }

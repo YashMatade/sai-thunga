@@ -199,23 +199,7 @@ useEffect(() => {
 
         </div>
       </div>
-      {/* <div className="bottom_header-content">
-  <div className="row">
-    <div className="col-lg-12">
-      <div className="bottom-content">
-        <h3>Book Free Appointments With Our Expert Doctors Near You</h3>
-        <div className="icons-container">
-          {cta.map((icon, index) => (
-            <div className="icon-box" key={icon?._id}>
-              <img src={icon?.department_cta_icon} alt={icon?.department_icon_name} loading="lazy"  title={icon?.department_icon_name}/>
-              <p>{icon?.department_icon_name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</div> */}
+
 
     
 
