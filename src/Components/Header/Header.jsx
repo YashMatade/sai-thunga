@@ -84,8 +84,8 @@ const Header = () => {
             Facilities
           </Link>
           <Link
-            to="/departments"
-            className={location.pathname === "/departments" ? "active" : ""}
+            to="/department/ent"
+            className={location.pathname === "/department/ent" ? "active" : ""}
           >
             Departments
           </Link>
@@ -162,7 +162,7 @@ const Header = () => {
               <Link to="/facilities" onClick={toggleSidebar}>
                 Facilities
               </Link>
-              <Link to="/departments" onClick={toggleSidebar}>
+              <Link to="/department/ent" onClick={toggleSidebar}>
                 Departments
               </Link>
               <Link to="/doctors" onClick={toggleSidebar}>
