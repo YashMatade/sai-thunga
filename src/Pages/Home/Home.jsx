@@ -25,8 +25,6 @@ const Home = () => {
         <Analytics />
         <Chooseus />
         <Depart />
-        <Testimonials />
-        <LatestBlogs />
         <VideoTestimonials />
 
         {/* Video Testimonails */}
@@ -55,7 +53,10 @@ const Home = () => {
           </div>
         </div>
 
+
+
         <FAQ />
+        <LatestBlogs />
       </div>
 
       <Footer />

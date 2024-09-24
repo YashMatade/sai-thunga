@@ -50,10 +50,10 @@ const LatestBlogs = () => {
   ];
 
   // Toggle between showing 2 blogs or all blogs
-  const displayedBlogs = showAll ? Blogs : Blogs.slice(0, 3);
+  const displayedBlogs = showAll ? Blogs : Blogs.slice(0, 2);
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="latestBlogs">
         <div className="top_intro_content">
           <h3>Latest Blogs & Articles</h3>

@@ -157,25 +157,7 @@ const DeptDoctors = () => {
   return (
     <div className="dept_doctor-section">
       <div className="container">
-        <div className="dept_doctor-location">
-          <h3>Choose Your Location</h3>
-          <p>It helps us to find the best doctors near you.</p>
-          <div className="dept_doctor_location-btns">
-            <button onClick={resetFilter}>All</button>
-            {location.length > 0 ? (
-              location.map((region, index) => (
-                <button
-                  key={index}
-                  onClick={() => filterDoctorsByRegion(region)}
-                >
-                  {region}
-                </button>
-              ))
-            ) : (
-              <span className="notfound">No regions Found</span>
-            )}
-          </div>
-        </div>
+     
 
         <div className="doctors-box">
           {treatmentDoctors.length > 0 ? (

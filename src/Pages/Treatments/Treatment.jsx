@@ -264,7 +264,6 @@ const Treatments = () => {
               </div>
             </div>
           </div>
-          <TreatmentLocation />
         </div>
         <div className="mobile_form container">
           <div className="header-form_dept form_treatment">

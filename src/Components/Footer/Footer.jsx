@@ -153,7 +153,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-copyrights">
-          <h3>&copy; 2024 Your Company Name. All rights reserved.</h3>
+          <h3>&copy; 2024 Saithunga. All rights reserved.</h3>
 
           {showGoTop && (
             <div className="gototop" onClick={scrollToTop}>

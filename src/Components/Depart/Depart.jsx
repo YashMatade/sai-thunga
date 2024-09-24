@@ -244,7 +244,7 @@ const Depart = () => {
       <h3>Our Departments</h3>
       </div>
 
-      <div className="container-fluid">
+      <div className="container">
         <div className="dept_show">
 
 

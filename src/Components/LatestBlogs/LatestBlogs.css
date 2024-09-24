@@ -1,10 +1,8 @@
 .blog-list{
-   gap: 1em;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+display: grid;
+grid-template-columns:repeat(2,500px);
    margin-bottom: 2em;
+   justify-content: center;
 
 }
 
@@ -104,6 +102,7 @@ border-radius: 15px;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 20px;
+    margin-bottom: 1em;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: 500;
