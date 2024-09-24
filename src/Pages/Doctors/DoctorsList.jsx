@@ -19,7 +19,7 @@ const DoctorCard = ({ doctor }) => {
   return (
     <div className="row" style={{ overflowX: "hidden" }}>
       <div className="col-lg-1"></div>
-      <div className="col-lg-12">
+      <div className="col-lg-10">
         {isLoading ? (
           <>
             <SkeletonTheme color="#e0e0e0" highlightColor="#f0f0f0">
@@ -65,9 +65,10 @@ const DoctorCard = ({ doctor }) => {
                 <div className="d-flex justify-content-center text-align-center ">
                   <img
                     style={{
-                      width: "200px",
-                      height: "250px",
-                      backgroundSize: "cover",
+                      width: "300px",
+                      height: "300px",
+                      objectFit: "cover",
+                      top: "100px",
                     }}
                     src={doctor.doctor_image}
                     className="rounded rounded-3 img-fluid "
@@ -261,7 +262,7 @@ const DoctorsList = () => {
     },
   ];
   return (
-    <div className="container mt-5">
+    <div className="container-fluid mt-5">
       {doctorsData?.map((doctor) => (
         <DoctorCard key={doctor.id} doctor={doctor} />
       ))}

@@ -1,190 +1,211 @@
-import React, { useState, useEffect } from 'react';
-import './GetinTouch.css';
-import axios from 'axios';
-import {  toast } from 'react-toastify';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import "./GetinTouch.css";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate, useParams } from "react-router-dom";
 
 const GetinTouch = () => {
-    const [branchLocations, setBranchLocations] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const api = import.meta.env.VITE_API;
-    const{dname}=useParams()
-    console.log(dname,"DeptGEtForm")
-    const [locations, setLocation] = useState([]);
-    const [alllocation, setAllLocation] = useState([]);
-    const [selectedFromList, setSelectedFromList] = useState(false);
-    const [doctors, setDoctors] = useState([]);
-    const [filteredDoctors, setFilteredDoctors] = useState([]);
-        const navigate = useNavigate();
+  const [branchLocations, setBranchLocations] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const api = import.meta.env.VITE_API;
+  const { dname } = useParams();
+  console.log(dname, "DeptGEtForm");
+  const [locations, setLocation] = useState([]);
+  const [alllocation, setAllLocation] = useState([]);
+  const [selectedFromList, setSelectedFromList] = useState(false);
+  const [doctors, setDoctors] = useState([]);
+  const [filteredDoctors, setFilteredDoctors] = useState([]);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const getLocations = async () => {
-            try {
-                const res = await axios.get(`${api}/region/get_popularregion`);
-                if (res.data && Array.isArray(res.data.data)) {
-                    const locations = res.data.data;
-                    setAllLocation(locations);
+  useEffect(() => {
+    const getLocations = async () => {
+      try {
+        const res = await axios.get(`${api}/region/get_popularregion`);
+        if (res.data && Array.isArray(res.data.data)) {
+          const locations = res.data.data;
+          setAllLocation(locations);
 
-                    const popular = locations.filter(location => location.popular_region === true);
-                    setLocation(popular);
-                } else {
-                    console.error('Invalid response data:', res.data);
-                }
-            } catch (error) {
-                console.error('Error fetching locations:', error);
-            }
-        };
-
-        getLocations();
-    }, []);
-
-   
-
-
-    useEffect(() => {
-        const getLocationinfo = async () => {
-            const res = await axios.get(`${api}/branches/all_locations`);
-            setBranchLocations(res.data.data);
+          const popular = locations.filter(
+            (location) => location.popular_region === true
+          );
+          setLocation(popular);
+        } else {
+          console.error("Invalid response data:", res.data);
         }
+      } catch (error) {
+        console.error("Error fetching locations:", error);
+      }
+    };
 
-        getLocationinfo();
-    }, []);
+    getLocations();
+  }, []);
 
-    const [formData, setFormData] = useState({
-        patient_name: '',
-        email_id: '',
-        contact_number: '',
-        address: '',
-        disease: '',
+  useEffect(() => {
+    const getLocationinfo = async () => {
+      const res = await axios.get(`${api}/branches/all_locations`);
+      setBranchLocations(res.data.data);
+    };
+
+    getLocationinfo();
+  }, []);
+
+  const [formData, setFormData] = useState({
+    patient_name: "",
+    email_id: "",
+    contact_number: "",
+    address: "",
+    disease: "",
+  });
+
+  const [diseaseList, setDiseaseList] = useState([]);
+
+  const handleLocationClick = (selectedLocation) => {
+    const newAddress = selectedLocation.region_name;
+
+    setFormData({
+      ...formData,
+      address: newAddress,
     });
 
-    const [diseaseList, setDiseaseList] = useState([]);
+    setSelectedFromList(true);
+  };
 
-    const handleLocationClick = (selectedLocation) => {
-        const newAddress = selectedLocation.region_name;
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
+  const handleAddDisease = () => {
+    const trimmedDisease = formData.disease.trim();
+    if (trimmedDisease === "") {
+      toast.error("Please enter a disease name");
+      return;
+    }
+
+    if (diseaseList.includes(trimmedDisease)) {
+      toast.error("Disease name already exists");
+      return;
+    }
+
+    setDiseaseList([...diseaseList, trimmedDisease]);
+    setFormData({
+      ...formData,
+      disease: "",
+    });
+  };
+
+  const handleRemoveDisease = (diseaseToRemove) => {
+    setDiseaseList(
+      diseaseList.filter((disease) => disease !== diseaseToRemove)
+    );
+  };
+
+  useEffect(() => {
+    const getFilteredDoctors = async () => {
+      try {
+        const res = await axios.get(`${api}/doctor/verifieddoctor`);
+        setDoctors(res.data.data);
+      } catch (e) {
+        console.log(e, "Fetching Doctors Failed");
+      }
+    };
+
+    getFilteredDoctors();
+  }, []);
+
+  useEffect(() => {
+    if (doctors.length > 0 && dname) {
+      const filtered = doctors.filter(
+        (doctor) => doctor?.department_id?.slug === dname
+      );
+      console.log(filtered, "filtered Doctors");
+      setFilteredDoctors(filtered);
+    }
+  }, [doctors, dname]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      if (
+        !formData.patient_name ||
+        !formData.address ||
+        !formData.email_id ||
+        diseaseList.length === 0
+      ) {
+        toast.error("Please fill in all fields");
+        return;
+      }
+
+      const requestData = {
+        patient_name: formData.patient_name,
+        email_id: formData.email_id,
+        contact_number: formData.contact_number,
+        address: formData.address,
+        disease: diseaseList,
+      };
+
+      setLoading(true);
+      const response = await axios.post(
+        `${api}/booking/create_booking`,
+        requestData
+      );
+
+      if (response.status === 200) {
         setFormData({
-            ...formData,
-            address: newAddress
+          patient_name: "",
+          email_id: "",
+          contact_number: "",
+          address: "",
+          disease: "",
         });
+        setDiseaseList([]);
+        toast.success("Our Team will connect with you soon.");
+        navigate("/doctors", { state: { filteredDoctors } });
+      } else {
+        console.error("Failed to submit data");
+        toast.error("Failed to submit data. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form data", error);
+      toast.error(
+        "An error occurred while submitting form data. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        setSelectedFromList(true);
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-
-    const handleAddDisease = () => {
-        const trimmedDisease = formData.disease.trim();
-        if (trimmedDisease === '') {
-            toast.error("Please enter a disease name");
-            return;
-        }
-
-        if (diseaseList.includes(trimmedDisease)) {
-            toast.error("Disease name already exists");
-            return;
-        }
-
-        setDiseaseList([...diseaseList, trimmedDisease]);
-        setFormData({
-            ...formData,
-            disease: ''
-        });
-    };
-
-    const handleRemoveDisease = (diseaseToRemove) => {
-        setDiseaseList(diseaseList.filter(disease => disease !== diseaseToRemove));
-    };
-
-
-    useEffect(() => {
-        const getFilteredDoctors = async () => {
-            try {
-                const res = await axios.get(`${api}/doctor/verifieddoctor`);
-                setDoctors(res.data.data);
-            } catch (e) {
-                console.log(e, "Fetching Doctors Failed");
-            }
-        };
-
-        getFilteredDoctors();
-    }, []);
-
-    useEffect(() => {
-        if (doctors.length > 0 && dname) {
-            const filtered = doctors.filter(doctor => 
-                doctor?.department_id?.slug === dname
-            );
-            console.log(filtered,"filtered Doctors")
-            setFilteredDoctors(filtered);
-        }
-    }, [doctors, dname]);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            if (!formData.patient_name || !formData.address || !formData.email_id || diseaseList.length === 0) {
-                toast.error("Please fill in all fields");
-                return;
-            }
-
-            const requestData = {
-                patient_name: formData.patient_name,
-                email_id: formData.email_id,
-                contact_number: formData.contact_number,
-                address: formData.address,
-                disease: diseaseList,
-            };
-
-            setLoading(true);
-            const response = await axios.post(`${api}/booking/create_booking`, requestData);
-
-            if (response.status === 200) {
-                setFormData({
-                    patient_name: '',
-                    email_id: '',
-                    contact_number: '',
-                    address: '',
-                    disease: '',
-                });
-                setDiseaseList([]);
-                toast.success("Our Team will connect with you soon.");
-                navigate('/doctors', { state: { filteredDoctors } });
-
-            } else {
-                console.error('Failed to submit data');
-                toast.error("Failed to submit data. Please try again.");
-            }
-        } catch (error) {
-            console.error('Error submitting form data', error);
-            toast.error("An error occurred while submitting form data. Please try again.");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    return (
-        <div className='container'>
-            <div className="row">
-                <div className=" col-lg-12 col-md-6">
-                    <div className="dept_getintouch-header">
-                        <h3>Get in Touch</h3>
-                        <p>Tell us about your problems and we'll figure out the best treatment option for you.</p>
-                    </div>
-                    <div className="dept_getintouch-panindia">
-                        <h3>Medidocs services are accessible Pan India</h3>
-                        <p>Medidocs has taken the latest medical technologies to ensure consistent quality of advanced surgical care in cities of India including {branchLocations.map((location, index) => (<span key={index} className='pan-india'>{location.Branch},</span>))}...
-                        </p>
-                    </div>
-                </div>
-                {/* <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+  return (
+    <div className="container">
+      <div className="row">
+        <div className=" col-lg-12 col-md-6">
+          <div className="dept_getintouch-header">
+            <h3>Get in Touch</h3>
+            <p>
+              Tell us about your problems and we'll figure out the best
+              treatment option for you.
+            </p>
+          </div>
+          <div className="dept_getintouch-panindia">
+            <h3>Medidocs services are accessible Pan India</h3>
+            <p>
+              Medidocs has taken the latest medical technologies to ensure
+              consistent quality of advanced surgical care in cities of India
+              including{" "}
+              {branchLocations.map((location, index) => (
+                <span key={index} className="pan-india">
+                  {location.Branch},
+                </span>
+              ))}
+              ...
+            </p>
+          </div>
+        </div>
+        {/* <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                     <div className="getintouch-form">
                         <h3>Book <span>FREE</span> Doctor <br /> Appointment</h3>
                         <form onSubmit={handleSubmit} className='header-form_getintouch'>
@@ -246,9 +267,9 @@ const GetinTouch = () => {
                         </form>
                     </div>
                 </div> */}
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default GetinTouch;

@@ -3,6 +3,7 @@ import { BiCheckCircle, BiLocationPlus } from "react-icons/bi";
 import { CiLocationArrow1, CiLocationOff } from "react-icons/ci";
 import pin from "/pin.png";
 import { BsFillCheckCircleFill } from "react-icons/bs";
+
 const styles = {
   container: {
     backgroundColor: "#3B3576",
@@ -11,7 +12,8 @@ const styles = {
     borderRadius: "12px",
   },
   headingContainer: {
-    marginBottom: "20px",
+    marginBottom: "70px",
+    marginTop: "70px",
   },
   heading: {
     color: "#fff",
@@ -25,7 +27,7 @@ const styles = {
     fontSize: "16px",
   },
   inputGroup: {
-    maxWidth: "800px",
+    maxWidth: "1000px",
     margin: "0 auto",
     borderRadius: "5px",
     overflow: "hidden",
@@ -35,10 +37,13 @@ const styles = {
   dropdownButton: {
     borderTopLeftRadius: "5px",
     borderBottomLeftRadius: "5px",
-    padding: "10px",
+    paddingTop: "10px",
+    paddingLeft: "10px",
+    paddingRight: "10px",
     maxWidth: "250px",
     border: "0",
     backgroundColor: "white",
+    height: "50px",
   },
   dropdownButtonMob: {
     borderTopLeftRadius: "5px",
