@@ -28,7 +28,8 @@ const schema = z.object({
 });
 
 const Departments = () => {
-  const api = "https://api.medidocs.online";
+  const api = import.meta.env.VITE_API;
+
   const navigate = useNavigate();
   const { dname } = useParams();
 

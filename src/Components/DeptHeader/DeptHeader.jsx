@@ -7,7 +7,7 @@ import axios from "axios";
 
 
 const ImageSlider = ({deptImg,deptname}) => {
-  const api = "https://api.medidocs.online";
+  const api = import.meta.env.VITE_API;
 
  
 

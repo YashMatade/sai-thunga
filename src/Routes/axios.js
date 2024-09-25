@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.medidocs.online";
+const BASE_URL =  import.meta.env.VITE_API || "https://api.st.tensysdemo.com";
+
 
 
 export const axiosPublic = axios.create({
